@@ -5,7 +5,7 @@
 body {
     padding-top: 66px;
     padding-bottom: 0;
-    background-image: url('{{ site.baseurl}}/img/bgtexture.png');
+    background-image: url('../img/bgtexture.png');
     overflow-x: hidden;
 }
 
@@ -51,7 +51,7 @@ h2{
     display: block;
     width: 80px;
     height: 24px;
-    background: url('{{ site.baseurl}}/img/logo-p2pu-menu.png') no-repeat;
+    background: url('../img/logo-p2pu-menu.png') no-repeat;
     padding: 0;
     margin: 17px 0;
     text-indent: -9999px;
@@ -116,7 +116,7 @@ h2{
     display: block;
     width: 282px;
     height: 98px;
-    background: url('{{ site.baseurl}}/img/logo-p2pu-big.png') no-repeat;
+    background: url('../img/logo-p2pu-big.png') no-repeat;
     padding: 0;
     margin: 40px auto 10px;
     text-indent: -9999px;
@@ -157,12 +157,12 @@ h2{
 }
 
 .sectionTexture {
-    background: url('{{ site.baseurl}}/img/bgsection.jpg');
+    background: url('../img/bgsection.jpg');
     background-size: cover;
 }
 
 .sectionTitle {
-    background-image: url('{{ site.baseurl}}/img/bgtexture.png');
+    background-image: url('../img/bgtexture.png');
     text-align: center;
     height: 100px;
 }
