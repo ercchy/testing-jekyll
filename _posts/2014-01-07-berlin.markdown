@@ -3,7 +3,7 @@ layout: report
 title:  "Berlin report"
 subtitle:  "Guide to Running a Pop-Up Office"
 date:   2014-01-07 10:55:25
-categories: reports berlin
+categories: reports
 cover_image_credit: "Sight of the Berliner Dom by João Menezes, CC BY SA"
 sections:
   Introduction:
