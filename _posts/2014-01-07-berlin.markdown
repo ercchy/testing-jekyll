@@ -248,18 +248,6 @@ sections:
   Opinions:
     strech:
         "**Check the highlight responses from the survey, marked in the red/orange/green matrix:**
-
-        <div class="span4 quotes">
-            <div class="quotesGreen"></div>
-            <p>“The city of Berlin itself.”</p>
-
-            <p>...<br>“Working at a collaborative space was super interesting.”</p>
-
-            <p>...<br>"Interactions and conversations with the people stood out! Both during 'office hours' and after
-                hours.”</p>
-
-            <p>...<br>“Working on a project for 2 weeks and getting lots of stuff done.”</p>
-        </div>
         "
   Numbers:
     strech:
