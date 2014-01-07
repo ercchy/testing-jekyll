@@ -106,7 +106,7 @@ sections:
 
   Logistic:
     left:
-      "![eat](/img/photo-eat.jpg 'Eat')
+      "![eat]({{ site.baseurl}}/img/photo-eat.jpg 'Eat')
 
       
       **EAT - The team that eats together, meets together**
@@ -116,7 +116,7 @@ sections:
       of which were open to guests, and others which were kept smaller.
       image
 
-      ![eat](/img/photo-work.jpg 'Work')
+      ![eat]({{ site.baseurl}}/img/photo-work.jpg 'Work')
 
 
       **WORK - Just, like, do it**
@@ -132,7 +132,7 @@ sections:
       benefit."
 
     right:
-      "![sleep](/img/photo-sleep.jpg 'Sleep')
+      "![sleep]({{ site.baseurl}}/img/photo-sleep.jpg 'Sleep')
 
 
       **SLEEP - No rest until Neukölln**
@@ -143,7 +143,7 @@ sections:
       before.
 
 
-      ![play](/img/photo-play.jpg 'Play')
+      ![play]({{ site.baseurl}}/img/photo-play.jpg 'Play')
 
 
       **PLAY - More than video games**
@@ -181,7 +181,7 @@ sections:
       participants who were in Berlin for the duration of the month to take one full day off.
       "
     right:
-      "![Logistics](/img/photo-logistics.jpg 'Logistic')
+      "![Logistics]({{ site.baseurl}}/img/photo-logistics.jpg 'Logistic')
 
 
       Being a distributed community, with members all over the world, access and participation are always
@@ -227,7 +227,7 @@ sections:
 
 
     right:
-      "![reflections](/img/photo-reflections.jpg 'Reflections')
+      "![reflections]({{ site.baseurl}}/img/photo-reflections.jpg 'Reflections')
                 
             
       In order to have as sense of ownership over a project, particularly one that is as community-driven as
@@ -252,7 +252,7 @@ sections:
   Numbers:
     strech:
       "P2PU Berlin Pop-up Office in numbers:
-      ![A picture of a cat](/img/cat.png){: .callout}"
+      ![A picture of a cat]({{ site.baseurl}}/img/cat.png){: .callout}"
 
 
 ---
