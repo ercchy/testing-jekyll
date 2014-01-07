@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/common_styles.css" rel="stylesheet">
+    <link href="/css/berlin_styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+</head>
+
+<body>
+<nav>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">P2PU</a>
+
+                <div class="nav-collapse collapse">
+
+                    <ul class="nav" id="top-menu">
+                        <li>
+                            <a class="p2pu-tab" href="#">
+                                <i class="icon-chevron-sign-down p2pu-tab-icon"></i>
+                            </a>
+                        </li>
+	                      {% for section in page.sections %}
+		                      {% assign title=section[0] %}
+		                      {% if title != 'clear' %}
+			                      <li {% if forloop.first %} class="active"{% endif %} >
+				                      <a href="#{{ title | downcase }}">{{ title }}</a>
+			                      </li>
+		                      {% endif %}
+	                      {% endfor %}
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+</nav>
+<header id="header">
+    <div class="container">
+        <span class="header-logo">P2PU</span>
+
+        <h1>{{ page.subtitle }}</h1>
+        <span class="header-tag">{{ page.cover_image_credit }}</span>
+    </div>
+</header>
+
+{% for section in page.sections %}
+	{% assign clear=false %}
+	{% assign title=section[0] %}
+	{% capture content %}{{ section[1]['strech'] }}{% endcapture %}
+	{% capture left %}{{ section[1]['left'] }}{% endcapture %}
+	{% capture right %}{{ section[1]['right'] }}{% endcapture %}
+	{% if title != 'clear' %}
+		{% include section.html title=title %}
+	{% else %}
+		{% assign clear=true%}
+	{% endif %}
+<div class="container">
+	<div class="row">
+		{% if clear %}<hr>{% endif %}
+		{% if content %}
+			{{ content | markdownify }}
+		{% endif %}
+
+		{% if left %}
+			<div class="span6">
+				{{ left | markdownify }}
+			</div>
+		{% endif %}
+		{% if right %}
+			<div class="span6">
+				{{ right | markdownify }}
+			</div>
+		{% endif %}
+
+	</div>
+</div>
+{% endfor %}
+
+
+
+<!-- container -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="span8">
+                <p><strong>What is P2PU?</strong></p>
+
+                <p>The Peer 2 Peer University is a grassroots open education project that organizes learning outside of
+                    institutional walls and gives learners recognition for their achievements. P2PU creates a model for
+                    lifelong learning alongside traditional formal higher education. Leveraging the internet and
+                    educational materials openly available online, P2PU enables high-quality low-cost education
+                    opportunities.</p>
+                <img src="/img/ico-cc.gif" class="ico-cc"
+                     alt="Licensed under the Creative Commons Attribution-ShareAlike 2.0 license (CC-BY-SA)"/>
+            </div>
+            <div class="span4">
+                <p><strong>Some of our Supporters</strong></p>
+
+                <p>
+
+                <div class="supporters">
+                    <img src="/img/logo-shuttleworth.png"/>
+                </div>
+                <div class="supporters">
+                    <img src="/img/logo-hewlett.png"/>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div> <!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../js/jquery-1.10.1.min.js"><\/script>')</script>
+
+<script src="/js/main.js"></script>
+<script type="text/javascript" src="http://rawgithub.com/ercchy/p2pu_navigation_widget/master/p2pu_menu_slider.js"></script>
+<script type="text/javascript">
+    Reports.Show.init();
+</script>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
